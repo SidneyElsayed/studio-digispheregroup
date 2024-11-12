@@ -1,11 +1,19 @@
-/* * {
+* {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-} */
+}
 /* Tailwind */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 /* Custom CSS */
+
+/* Typography */
+body {
+    font-family: "Montserrat", sans-serif;
+}
+
+.featured-text { font-family: "Oranienbaum", serif;}
+.accent-text { font-family: "Poppins", sans-serif;}

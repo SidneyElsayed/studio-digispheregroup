@@ -9,7 +9,7 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        terracotta: '#FB902D',
+        terracotta: '#c97324',
         cream: '#FBF2E9',
       }
     },
