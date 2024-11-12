@@ -1,0 +1,22 @@
+<!-- Cards with Border Section -->
+<section class="p-16 py-24 border-y border-terracotta">
+  <div class="grid sm:grid-cols-3 gap-6 pt-6">
+
+    {% for item in block.card-loop %}
+
+      <!-- Card Loop -->
+      <div class="border border-terracotta">
+        <div class="text-center">
+          <div class="p-4">
+            <img class="aspect-square  border border-terracotta object-cover w-full" src="{{item.image}}" alt="{{item.alt}}">
+          </div>
+          <h3 class="featured-text py-4 text-2xl">{{item.heading}}</h3>
+          <hr class="border-terracotta border-1">
+          <p class="p-4 pt-6">{{item.text}}</p>
+        </div>
+      </div>
+    
+    {% endfor %}
+
+  </div>
+</section>

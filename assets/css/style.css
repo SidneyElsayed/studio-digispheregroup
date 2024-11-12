@@ -485,6 +485,20 @@ video {
 .inset-0 {
     inset: 0px;
 }
+.inset-y-0 {
+    top: 0px;
+    bottom: 0px;
+}
+.inset-x-0 {
+    left: 0px;
+    right: 0px;
+}
+.left-\[30vw\] {
+    left: 30vw;
+}
+.right-0 {
+    right: 0px;
+}
 .order-first {
     order: -9999;
 }
@@ -502,6 +516,9 @@ video {
 }
 .-m-px {
     margin: -1px;
+}
+.m-4 {
+    margin: 1rem;
 }
 .-mx-2 {
     margin-left: -0.5rem;
@@ -548,6 +565,9 @@ video {
 }
 .w-full {
     width: 100%;
+}
+.w-\[70vw\] {
+    width: 70vw;
 }
 .grow {
     flex-grow: 1;

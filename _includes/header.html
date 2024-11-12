@@ -1,18 +1,18 @@
 <!-- Header -->
 <header class="relative min-h-screen flex flex-col">
-  <img class="absolute inset-0 w-full h-full object-cover" src="{{page.banner-image}}" alt="{{page.banner-image-alt}}">
+  <img class="absolute object-cover h-full inset-y-0 right-0 {% if page.banner.header-style == 'full width' %} inset-x-0 w-full {% elsif page.banner.header-style == 'two thirds' %} left-[30vw] w-[70vw] {% endif %}" src="{{page.banner.banner-image}}" alt="{{page.banner.banner-image-alt}}" style="object-position: {{page.banner.banner-horizontal-focal-point}}  {{page.banner.banner-vertical-focal-point}}">
   <!-- Nav Bar -->
   <nav class="relative flex flex-col md:flex-row justify-between p-4 px-8">
     <a href="/index.html" class="text-xl featured-text">The Yoga Studio</a>
     <div class="content-center -mx-2">
       <a href="/our-classes.html" class="p-4 uppercase text-sm tracking-wide">Our Classes</a>
-      <a href="#" class="p-4 uppercase text-sm tracking-wide">Schedule</a>
+      <a href="/schedule.html" class="p-4 uppercase text-sm tracking-wide">Schedule</a>
       <a href="#" class="p-4 uppercase text-sm tracking-wide">Contact</a>
     </div>
   </nav>
   <div class="relative grow flex flex-col justify-center p-24">
     <hr class="border-terracotta -ml-24 w-1/3">
-    <p class="pt-10 uppercase accent-text tracking-widest">{{page.overline}}</p>
-    <h1 class="text-7xl featured-text">{{page.main-heading}}</h1>
+    <p class="pt-10 uppercase accent-text tracking-widest">{{page.banner.overline}}</p>
+    <h1 class="text-7xl featured-text">{{page.banner.main-heading}}</h1>
   </div>
 </header>
