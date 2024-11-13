@@ -1,7 +1,13 @@
 <!-- Cards with Border Section -->
 <section class="py-24 border-y border-featured">
 
-  <div class="gap-6 p-16 pt-6 {% if block.card-loop.size > 3 %} flex overflow-x-auto w-full {% else %} grid sm:grid-cols-3 {% endif %}">
+  {% if block.section-heading %}
+
+  <h2 class="px-8 sm:px-16 featured-text text-4xl">{{block.section-heading}}</h2>
+
+  {% endif %}
+
+  <div class="gap-6 p-16 pt-6 {% if block.card-loop.size > 3 %} flex overflow-x-auto w-full {% else %} grid md:grid-cols-3 {% endif %}">
 
     {% for item in block.card-loop %}
 
@@ -12,13 +18,13 @@
         </div>
         <div class="p-4">
           <h3 class="featured-text py-4 text-2xl">{{item.heading}}</h3>
-          <hr class="border-featured border-1">
+          <hr class="border-featured border-1 {% if block.card-border == true %} -mx-4 {% endif %}">
           <p class="p-4 pt-6">{{item.text}}</p>
 
-          {% if block.card-loop.button-link and block.card-loop.button-text %}
+          {% if item.button-link and item.button-text %}
 
-          <a href="#" type="submit" class="button"> {{item.button-text}} </a>
-          
+          <a href="{{item.button-link}}" class="button"> {{item.button-text}} </a>
+
           {% endif %}
 
         </div>

@@ -490,6 +490,10 @@ video {
     margin-left: -0.5rem;
     margin-right: -0.5rem;
 }
+.-mx-4 {
+    margin-left: -1rem;
+    margin-right: -1rem;
+}
 .-my-px {
     margin-top: -1px;
     margin-bottom: -1px;
@@ -782,7 +786,7 @@ body {
 .accent-text { font-family: "Poppins", sans-serif;}
 
 /* Reuseable Group Styles */
-body .button {
+.button {
     background-color: var(--featured-color);
     color: var(--base-color);
     text-transform: uppercase;
@@ -790,9 +794,10 @@ body .button {
     padding: 0.5rem 1.5rem;
     border: 1px solid var(--featured-color);
     transition: all 150ms;
+    display: inline-block;
 }
 
-body .button:hover {
+.button:hover {
     background-color: var(--accent-color);
     color: var(--featured-color);
 }
@@ -870,6 +875,9 @@ footer a:hover {
     }
     .md\:grid-cols-2 {
         grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+    .md\:grid-cols-3 {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
     }
     .md\:flex-row {
         flex-direction: row;
