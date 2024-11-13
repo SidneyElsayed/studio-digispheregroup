@@ -1,11 +1,11 @@
-<!-- Our Serivces Section -->
+<!-- Cards Section -->
 <section class="p-16 py-24 border-y border-terracotta">
   <h2 class="uppercase text-2xl">{{block.main-heading}}</h2>
   <div class="grid sm:grid-cols-3 gap-6 pt-6">
 
     {% for item in block.card-loop %}
 
-      <!-- Service 1 -->
+      <!-- Card Loop -->
       <div class="text-center">
           <img class="aspect-square border border-terracotta object-cover w-full" src="{{item.image}}" alt="{{item.alt}}">
           <h3 class="featured-text py-4 text-2xl">{{item.heading}}</h3>
