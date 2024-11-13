@@ -23,3 +23,19 @@ card-loop:
           laudantium, dolor blandi.
         button-text: Sign up
         button-link: /schedule.html
+      - image: /images/yoga-studio-3.jpg
+        alt:
+        heading: Vinyasa Flow
+        text: >-
+          Laudantium Dolor sit amet isicing elit. Dolorem nditiis laudantium
+          laudantium, dolor blandi.
+        button-text: Sign up
+        button-link: /schedule.html
+      - image: /images/yoga-studio-7.jpg
+        alt:
+        heading: Iyengar Yoga
+        text: >-
+          Laudantium Dolor sit amet isicing elit. Dolorem nditiis laudantium
+          laudantium, dolor blandi.
+        button-text: Sign up
+        button-link: /schedule.html

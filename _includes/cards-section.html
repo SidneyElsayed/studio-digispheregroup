@@ -7,12 +7,12 @@
 
   {% endif %}
 
-  <div class="gap-6 p-16 pt-6 {% if block.card-loop.size > 3 %} flex overflow-x-auto w-full {% else %} grid md:grid-cols-3 {% endif %}">
+  <div class="gap-6 p-16 pt-6 {% if items.size > 3 %} flex overflow-x-auto w-full {% else %} grid md:grid-cols-3 {% endif %}">
 
     {% for item in items %}
 
       <!-- Card Loop -->
-      <div class="text-center {% if block.card-border == true %} border border-featured {% endif %} {% if block.card-loop.size > 3 %} basis-[30%] shrink-0 {% endif %}">
+      <div class="text-center {% if block.card-border == true %} border border-featured {% endif %} {% if items.size > 3 %} basis-[30%] shrink-0 {% endif %}">
         <div class="{% if block.card-border == true %} p-4 {% endif %}">
           <img class="aspect-square  border border-featured object-cover w-full" src="{{item.image}}" alt="{{item.alt}}">
         </div>

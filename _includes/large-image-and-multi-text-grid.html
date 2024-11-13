@@ -13,11 +13,18 @@
     </div>
   </div>
 
-  {% for item in block.text-loop %}
-  <div class="col-span-2 sm:col-span-1 -my-px p-6 flex">
+  {% for item in items | limit:4 %}
+  <div class="col-span-2 md:col-span-1 -my-px p-6 flex">
     <div class="self-end">
+
+      {% if items.size > 4 and forloop.index == 4 %}
+        <a href="/our-classes.html" class="featured-text text-4xl">See more &#8594;</a>
+
+      {% else %}
+
       <h3 class="featured-text text-4xl pb-2">{{item.heading}}</h3>
       <p class="">{{item.text}}</p>
+      {% endif %}
     </div>
   </div>
   {% endfor %}

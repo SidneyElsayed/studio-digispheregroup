@@ -31,6 +31,7 @@ _inputs:
       allow_create: true
       empty_type: array
     cascade: true
+  # This header style section is a perfect example for making the dropdown for the client in cloud cannon
   header-style:
     type: select
     label: Header style
@@ -64,6 +65,7 @@ _inputs:
     type: text
     hidden: true
     cascade: true
+# Structures have to be made in cloud cannon first, then the blocks section is what makes it possible for clients to pick which block they want to use.
 _structures:
   blocks:
     style: select
