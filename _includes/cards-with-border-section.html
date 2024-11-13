@@ -10,9 +10,12 @@
           <div class="p-4">
             <img class="aspect-square  border border-terracotta object-cover w-full" src="{{item.image}}" alt="{{item.alt}}">
           </div>
-          <h3 class="featured-text py-4 text-2xl">{{item.heading}}</h3>
-          <hr class="border-terracotta border-1">
-          <p class="p-4 pt-6">{{item.text}}</p>
+          <div class="p-4">
+            <h3 class="featured-text py-4 text-2xl">{{item.heading}}</h3>
+            <hr class="border-terracotta border-1">
+            <p class="p-4 pt-6">{{item.text}}</p>
+            <button type="submit" class="bg-terracotta text-white uppercase text-xs px-6 py-2 border-terracotta border transition hover:bg-sandy hover:text-terracotta"> {{item.button-text}} </button>
+          </div>
         </div>
       </div>
     

@@ -11,6 +11,7 @@ module.exports = {
       colors: {
         terracotta: '#c97324',
         cream: '#FBF2E9',
+        sandy: '#f6e2ce',
       }
     },
   },

@@ -1,25 +1,24 @@
-<section class="grid">
-  <div class=""></div>
-  <div class="w-[70vh]">
-    <form class="p-8 px-8 sm:px-16 flex flex-col col-span-1 md:pr-12">
+<section class="border-y border-terracotta">
+  <div class="w-[70vw]">
+    <form class="p-8 px-8 sm:px-16 flex flex-col md:pr-12">
       <!-- Name -->
       <div class="py-6 md:pt-0">
-      <label class="uppercase font-bold border-terracotta border-b-2 block" for="_name"> Name </label>
-      <input class="pt-2 bg-cream" type="text" name="_name" id="_name" placeholder="" />  
+      <!-- COMMENTING OUT THE LABEL <label class="uppercase font-semibold border-terracotta border-b block" for="_name"> Name </label> -->
+      <input class="placeholder:uppercase font-semibold placeholder:text-terracotta border-terracotta border-b block w-full py-2 outline-none bg-cream focus:bg-sandy" type="text" name="_name" id="_name" placeholder="Name" />  
       </div>
       <!-- Email -->
       <div class="pb-6">
-      <label class="uppercase font-bold border-terracotta border-b-2 block" for="_replyto"> Email </label>
-      <input class="pt-2 bg-cream" type="email" name="_replyto" id="_replyto" placeholder="" />
+      <!-- COMMENTING OUT THE LABEL <label class="uppercase font-semibold border-terracotta border-b block" for="_replyto"> Email </label> -->
+      <input class="placeholder:uppercase font-semibold placeholder:text-terracotta border-terracotta border-b block w-full py-2 outline-none bg-cream focus:bg-sandy" type="email" name="_replyto" id="_replyto" placeholder="Email" />
       </div>
       <!-- Message -->
       <div class="pb-6">
-      <label class="uppercase font-bold block" for="message">Message</label>
-      <textarea class="p-1 bg-cream block w-full border-terracotta border-2" name="message" id="message" placeholder=""></textarea>
+      <label class="uppercase font-semibold block" for="message">Message</label>
+      <textarea class="p-1 bg-cream block w-full border-terracotta border outline-none focus:bg-sandy" name="message" id="message" placeholder=""></textarea>
       </div>
       <!-- Button -->
       <div class="text-center">
-      <button type="submit" class="bg-terracotta text-white uppercase text-xs px-6 p-2"> Submit </button>
+      <button type="submit" class="bg-terracotta text-white uppercase text-xs px-6 p-2 border-terracotta border transition hover:bg-sandy hover:text-terracotta"> Submit </button>
       </div>
     </form>
   </div>
