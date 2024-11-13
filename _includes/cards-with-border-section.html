@@ -1,25 +1,31 @@
 <!-- Cards with Border Section -->
-<section class="p-16 py-24 border-y border-featured">
-  <div class="grid sm:grid-cols-3 gap-6 pt-6">
+<section class="py-24 border-y border-featured">
+
+  <div class="gap-6 p-16 pt-6 {% if block.card-loop.size > 3 %} flex overflow-x-auto w-full {% else %} grid sm:grid-cols-3 {% endif %}">
 
     {% for item in block.card-loop %}
 
       <!-- Card Loop -->
-      <div class="border border-featured">
-        <div class="text-center">
-          <div class="p-4">
-            <img class="aspect-square  border border-featured object-cover w-full" src="{{item.image}}" alt="{{item.alt}}">
-          </div>
-          <div class="p-4">
-            <h3 class="featured-text py-4 text-2xl">{{item.heading}}</h3>
-            <hr class="border-featured border-1">
-            <p class="p-4 pt-6">{{item.text}}</p>
-            <button type="submit" class="button"> {{item.button-text}} </button>
-          </div>
+      <div class="text-center {% if block.card-border == true %} border border-featured {% endif %} {% if block.card-loop.size > 3 %} basis-[30%] shrink-0 {% endif %}">
+        <div class="p-4">
+          <img class="aspect-square  border border-featured object-cover w-full" src="{{item.image}}" alt="{{item.alt}}">
+        </div>
+        <div class="p-4">
+          <h3 class="featured-text py-4 text-2xl">{{item.heading}}</h3>
+          <hr class="border-featured border-1">
+          <p class="p-4 pt-6">{{item.text}}</p>
+
+          {% if block.card-loop.button-link and block.card-loop.button-text %}
+
+          <a href="#" type="submit" class="button"> {{item.button-text}} </a>
+          
+          {% endif %}
+
         </div>
       </div>
     
     {% endfor %}
 
-  </div>
+</div>
+
 </section>
