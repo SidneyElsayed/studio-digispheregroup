@@ -636,10 +636,6 @@ video {
 .p-8 {
     padding: 2rem;
 }
-.px-10 {
-    padding-left: 2.5rem;
-    padding-right: 2.5rem;
-}
 .px-6 {
     padding-left: 1.5rem;
     padding-right: 1.5rem;
@@ -647,6 +643,10 @@ video {
 .px-8 {
     padding-left: 2rem;
     padding-right: 2rem;
+}
+.py-1 {
+    padding-top: 0.25rem;
+    padding-bottom: 0.25rem;
 }
 .py-16 {
     padding-top: 4rem;
@@ -682,6 +682,12 @@ video {
 }
 .pb-8 {
     padding-bottom: 2rem;
+}
+.pl-2 {
+    padding-left: 0.5rem;
+}
+.pr-10 {
+    padding-right: 2.5rem;
 }
 .pr-12 {
     padding-right: 3rem;
@@ -755,13 +761,6 @@ video {
     outline: 2px solid transparent;
     outline-offset: 2px;
 }
-.transition {
-    transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-backdrop-filter;
-    transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
-    transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-backdrop-filter;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-    transition-duration: 150ms;
-}
 
 /* Custom CSS */
 
@@ -774,20 +773,23 @@ body {
 .accent-text { font-family: "Poppins", sans-serif;}
 
 /* Reuseable Group Styles */
-.button {
+body .button {
     background-color: var(--featured-color);
-    color: white;
+    color: var(--base-color);
     text-transform: uppercase;
     font-size: 0.75rem;
     padding: 0.5rem 1.5rem;
-    border: 1px var(--featured-color);
+    border: 1px solid var(--featured-color);
     transition: all 150ms;
 }
 
-.button:hover {
+body .button:hover {
     background-color: var(--accent-color);
     color: var(--featured-color);
-    border: 1px var(--featured-color);
+}
+
+footer a:hover {
+    color: var(--accent-color);
 }
 
 .placeholder\:uppercase::-moz-placeholder {
@@ -806,8 +808,17 @@ body {
     color: var(--featured-color);
 }
 
-.hover\:text-featured:hover {
-    color: var(--featured-color);
+.hover\:bg-accent:hover {
+    background-color: var(--accent-color);
+}
+
+.focus\:bg-accent:focus {
+    background-color: var(--accent-color);
+}
+
+.focus\:outline-none:focus {
+    outline: 2px solid transparent;
+    outline-offset: 2px;
 }
 
 @media (min-width: 640px) {

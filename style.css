@@ -19,18 +19,21 @@ body {
 .accent-text { font-family: "Poppins", sans-serif;}
 
 /* Reuseable Group Styles */
-.button {
+body .button {
     background-color: var(--featured-color);
-    color: white;
+    color: var(--base-color);
     text-transform: uppercase;
     font-size: 0.75rem;
     padding: 0.5rem 1.5rem;
-    border: 1px var(--featured-color);
+    border: 1px solid var(--featured-color);
     transition: all 150ms;
 }
 
-.button:hover {
+body .button:hover {
     background-color: var(--accent-color);
     color: var(--featured-color);
-    border: 1px var(--featured-color);
+}
+
+footer a:hover {
+    color: var(--accent-color);
 }
