@@ -483,9 +483,6 @@ video {
 .col-span-4 {
     grid-column: span 4 / span 4;
 }
-.row-span-2 {
-    grid-row: span 2 / span 2;
-}
 .row-span-4 {
     grid-row: span 4 / span 4;
 }
@@ -571,9 +568,8 @@ video {
     border-top-width: calc(1px * calc(1 - var(--tw-divide-y-reverse)));
     border-bottom-width: calc(1px * var(--tw-divide-y-reverse));
 }
-.divide-terracotta > :not([hidden]) ~ :not([hidden]) {
-    --tw-divide-opacity: 1;
-    border-color: rgb(201 115 36 / var(--tw-divide-opacity));
+.divide-featured > :not([hidden]) ~ :not([hidden]) {
+    border-color: var(--featured-color);
 }
 .self-end {
     align-self: flex-end;
@@ -588,28 +584,24 @@ video {
 .border-b {
     border-bottom-width: 1px;
 }
+.border-base {
+    border-color: var(--base-color);
+}
 .border-black {
     --tw-border-opacity: 1;
     border-color: rgb(0 0 0 / var(--tw-border-opacity));
 }
-.border-cream {
-    --tw-border-opacity: 1;
-    border-color: rgb(251 242 233 / var(--tw-border-opacity));
+.border-featured {
+    border-color: var(--featured-color);
 }
-.border-terracotta {
-    --tw-border-opacity: 1;
-    border-color: rgb(201 115 36 / var(--tw-border-opacity));
+.bg-base {
+    background-color: var(--base-color);
 }
-.bg-cream {
-    --tw-bg-opacity: 1;
-    background-color: rgb(251 242 233 / var(--tw-bg-opacity));
+.bg-featured {
+    background-color: var(--featured-color);
 }
 .bg-inherit {
     background-color: inherit;
-}
-.bg-terracotta {
-    --tw-bg-opacity: 1;
-    background-color: rgb(201 115 36 / var(--tw-bg-opacity));
 }
 .object-cover {
     -o-object-fit: cover;
@@ -718,6 +710,10 @@ video {
     font-size: 4.5rem;
     line-height: 1;
 }
+.text-base {
+    font-size: 1rem;
+    line-height: 1.5rem;
+}
 .text-sm {
     font-size: 0.875rem;
     line-height: 1.25rem;
@@ -742,13 +738,11 @@ video {
 .tracking-widest {
     letter-spacing: 0.1em;
 }
-.text-cream {
-    --tw-text-opacity: 1;
-    color: rgb(251 242 233 / var(--tw-text-opacity));
+.text-base {
+    color: var(--base-color);
 }
-.text-terracotta {
-    --tw-text-opacity: 1;
-    color: rgb(201 115 36 / var(--tw-text-opacity));
+.text-featured {
+    color: var(--featured-color);
 }
 .text-white {
     --tw-text-opacity: 1;
@@ -778,44 +772,50 @@ body {
 
 .featured-text { font-family: "Oranienbaum", serif;}
 .accent-text { font-family: "Poppins", sans-serif;}
+
+/* Reuseable Group Styles */
+.button {
+    background-color: var(--featured-color);
+    color: white;
+    text-transform: uppercase;
+    font-size: 0.75rem;
+    padding: 0.5rem 1.5rem;
+    border: 1px var(--featured-color);
+    transition: all 150ms;
+}
+
+.button:hover {
+    background-color: var(--accent-color);
+    color: var(--featured-color);
+    border: 1px var(--featured-color);
+}
+
 .placeholder\:uppercase::-moz-placeholder {
     text-transform: uppercase;
 }
+
 .placeholder\:uppercase::placeholder {
     text-transform: uppercase;
 }
-.placeholder\:text-terracotta::-moz-placeholder {
-    --tw-text-opacity: 1;
-    color: rgb(201 115 36 / var(--tw-text-opacity));
+
+.placeholder\:text-featured::-moz-placeholder {
+    color: var(--featured-color);
 }
-.placeholder\:text-terracotta::placeholder {
-    --tw-text-opacity: 1;
-    color: rgb(201 115 36 / var(--tw-text-opacity));
+
+.placeholder\:text-featured::placeholder {
+    color: var(--featured-color);
 }
-.hover\:bg-sandy:hover {
-    --tw-bg-opacity: 1;
-    background-color: rgb(246 226 206 / var(--tw-bg-opacity));
+
+.hover\:text-featured:hover {
+    color: var(--featured-color);
 }
-.hover\:text-terracotta:hover {
-    --tw-text-opacity: 1;
-    color: rgb(201 115 36 / var(--tw-text-opacity));
-}
-.focus\:bg-sandy:focus {
-    --tw-bg-opacity: 1;
-    background-color: rgb(246 226 206 / var(--tw-bg-opacity));
-}
+
 @media (min-width: 640px) {
     .sm\:left-\[30vw\] {
         left: 30vw;
     }
-    .sm\:col-span-2 {
-        grid-column: span 2 / span 2;
-    }
     .sm\:col-span-1 {
         grid-column: span 1 / span 1;
-    }
-    .sm\:row-span-2 {
-        grid-row: span 2 / span 2;
     }
     .sm\:w-\[70vw\] {
         width: 70vw;
@@ -831,18 +831,13 @@ body {
         padding-right: 4rem;
     }
 }
+
 @media (min-width: 768px) {
     .md\:order-none {
         order: 0;
     }
-    .md\:col-span-4 {
-        grid-column: span 4 / span 4;
-    }
     .md\:col-span-2 {
         grid-column: span 2 / span 2;
-    }
-    .md\:row-span-4 {
-        grid-row: span 4 / span 4;
     }
     .md\:row-span-2 {
         grid-row: span 2 / span 2;

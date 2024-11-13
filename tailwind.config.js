@@ -9,9 +9,9 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        terracotta: '#c97324',
-        cream: '#FBF2E9',
-        sandy: '#f6e2ce',
+        'featured': 'var(--featured-color)',
+        'accent': 'var(--accent-color)',
+        'base': 'var(--base-color)',
       }
     },
   },
