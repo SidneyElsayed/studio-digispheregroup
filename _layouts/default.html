@@ -18,6 +18,13 @@
  {% include header.html %}
 
  {% for block in page.blocks %}
+   {% if block.type == 'classes' %}
+      {% assign items = site.data.classes.card-loop %}
+   {% elsif block.type == 'testimonials' %}
+      {% assign items = site.data.testimonials.card-loop %}
+   {% else %}
+      {% assign items = block.items %}
+   {% endif %}
 
  {% include /{{block.id}}.html %}
 
