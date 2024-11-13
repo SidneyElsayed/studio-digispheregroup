@@ -31,6 +31,13 @@ _inputs:
       allow_create: true
       empty_type: array
     cascade: true
+  header-style:
+    type: select
+    options:
+      values: 
+        - full width
+        - two thirds
+    cascade: true
   id:
     type: text
     hidden: true
