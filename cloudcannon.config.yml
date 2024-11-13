@@ -26,6 +26,76 @@ _inputs:
     type: multiselect
     options:
       allow_create: true
+  id:
+    type: text
+    hidden: true
+    cascade: true
+_structures:
+  blocks:
+    style: select
+    values:
+      - label: text and image grid
+        value: 
+          id: text-and-image-grid
+          heading: Heading
+          text-1: >-
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus ullam
+            debitis ipsa nemo unde omnis nisi, corporis ex asperiores minus sequi
+            perferendis alias. Nisi quod vero incidunt, sapiente reiciendis ducimus.
+            Nisi quod vero incidunt, sapiente reiciendis ducimus! Lorem ipsum dolor
+            sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet
+            consectetur adipisicing elit.
+          text-2:
+          button-text: Sign up
+          image: /images/yoga-studio-8.jpg 
+      - label: large image and multi text grid
+        value: 
+          id: large-image-and-multi-text-grid
+          image: /images/yoga-studio-7.jpg
+          heading: Heading on Photo
+          text: >-
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Numquam
+            provident, iste culpa, voluptatibus magnam error tempora minima modi quod
+            suscipit vel facilis pariatur voluptas odio totam molestiae temporibus
+            minus omnis?
+          button-text: Find out more
+          text-loop:
+            - heading: Text heading
+              text: >-
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda
+                quas rem nisi deserunt.
+            - heading: Text heading
+              text: >-
+                Explicabo ducimus. Neque tenetur pariatur illum quidem repudiandae
+                tihil laboriosam voluptatibus! Facere, fuga.
+            - heading: Text heading
+              text: >-
+                Neque tenetur pariatur illum quidem repudiandae totam nesciunt autem
+                nihil laboriosam voluptatibus! Facere, fuga.
+            - heading: Text heading
+              text: >-
+                Amet consectetur adipisicing elit. Cum assumenda quas rem nisi
+                deserunt adipisicing elit.
+      - label: cards section
+        value:
+          id: cards-section
+          main-heading: Section heading
+          card-loop:
+            - image: /images/yoga-studio-6.jpg
+              alt:
+              heading: Card title
+              text: >-
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolorem
+                laudantium, dolor blanditiis!
+      - label: cards with border section
+        value:
+          id: cards-with-border-section
+          card-loop:
+            - image: /images/yoga-studio-3.jpg
+              alt:
+              heading: Card title
+              text: Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolorem laudantium, dolor blanditiis!
+              button-text: Sign up
 _select_data: {}
 _structures: {}
 _editables: {}
