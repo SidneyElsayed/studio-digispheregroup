@@ -1,31 +1,36 @@
-source: ''
+_schema: _schema
 paths:
-  static: ''
   uploads: uploads
-  data: _data
-  includes: _includes
-  layouts: _layouts
   uploads_use_relative_path: false
+  static: ''
   dam_uploads: ''
   dam_static: ''
   collections: ''
+  data: _data
+  layouts: _layouts
+  includes: _includes
 collections_config:
   pages:
     path: ''
+    icon: notes
     output: true
     filter: strict
-    auto_discovered: true
-collection_groups: null
-_enabled_editors: null
+    disable_add: false
+    disable_add_folder: false
+    disable_file_actions: false
 _inputs:
   categories:
     type: multiselect
     options:
       allow_create: true
+      empty_type: array
+    cascade: true
   tags:
     type: multiselect
     options:
       allow_create: true
+      empty_type: array
+    cascade: true
   id:
     type: text
     hidden: true
@@ -33,73 +38,8 @@ _inputs:
 _structures:
   blocks:
     style: select
+    id_key:
     values:
-      - label: text and image grid
-        value: 
-          id: text-and-image-grid
-          heading: Heading
-          text-1: >-
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus ullam
-            debitis ipsa nemo unde omnis nisi, corporis ex asperiores minus sequi
-            perferendis alias. Nisi quod vero incidunt, sapiente reiciendis ducimus.
-            Nisi quod vero incidunt, sapiente reiciendis ducimus! Lorem ipsum dolor
-            sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet
-            consectetur adipisicing elit.
-          text-2:
-          button-text: Sign up
-          image: /images/yoga-studio-8.jpg 
-      - label: large image and multi text grid
-        value: 
-          id: large-image-and-multi-text-grid
-          image: /images/yoga-studio-7.jpg
-          heading: Heading on Photo
-          text: >-
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Numquam
-            provident, iste culpa, voluptatibus magnam error tempora minima modi quod
-            suscipit vel facilis pariatur voluptas odio totam molestiae temporibus
-            minus omnis?
-          button-text: Find out more
-          text-loop:
-            - heading: Text heading
-              text: >-
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda
-                quas rem nisi deserunt.
-            - heading: Text heading
-              text: >-
-                Explicabo ducimus. Neque tenetur pariatur illum quidem repudiandae
-                tihil laboriosam voluptatibus! Facere, fuga.
-            - heading: Text heading
-              text: >-
-                Neque tenetur pariatur illum quidem repudiandae totam nesciunt autem
-                nihil laboriosam voluptatibus! Facere, fuga.
-            - heading: Text heading
-              text: >-
-                Amet consectetur adipisicing elit. Cum assumenda quas rem nisi
-                deserunt adipisicing elit.
-      - label: cards section
-        value:
-          id: cards-section
-          main-heading: Section heading
-          card-loop:
-            - image: /images/yoga-studio-6.jpg
-              alt:
-              heading: Card title
-              text: >-
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolorem
-                laudantium, dolor blanditiis!
-      - label: cards with border section
-        value:
-          id: cards-with-border-section
-          card-loop:
-            - image: /images/yoga-studio-3.jpg
-              alt:
-              heading: Card title
-              text: Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolorem laudantium, dolor blanditiis!
-              button-text: Sign up
-_select_data: {}
-_structures: {}
-_editables: {}
-commit_templates: []
 _snippets:
   _cc_jekyll_unknown_paired_tag:
     hidden: true
@@ -114,19 +54,33 @@ _snippets:
       icon: question_mark
     _inputs:
       name:
+        type: auto
         hidden: true
+        cascade: true
       args:
+        type: auto
         hidden: true
+        cascade: true
       content:
+        type: auto
         hidden: true
+        cascade: true
       trim_top_left:
+        type: auto
         hidden: true
+        cascade: true
       trim_top_right:
+        type: auto
         hidden: true
+        cascade: true
       trim_bottom_left:
+        type: auto
         hidden: true
+        cascade: true
       trim_bottom_right:
+        type: auto
         hidden: true
+        cascade: true
     params:
       content:
         parser: content
@@ -218,13 +172,21 @@ _snippets:
       icon: question_mark
     _inputs:
       name:
+        type: auto
         hidden: true
+        cascade: true
       args:
+        type: auto
         hidden: true
+        cascade: true
       trim_left:
+        type: auto
         hidden: true
+        cascade: true
       trim_right:
+        type: auto
         hidden: true
+        cascade: true
     params:
       name:
         parser: argument
@@ -300,6 +262,7 @@ _snippets:
     _inputs:
       content:
         type: code
+        cascade: true
       language:
         type: select
         options:
@@ -590,6 +553,7 @@ _snippets:
               name: Xojo
             - value: yaml
               name: Yaml
+        cascade: true
   _cc_jekyll_template:
     hidden: true
     snippet: '{{[[trim_left]][[template]][[trim_right]]}}'
@@ -600,11 +564,17 @@ _snippets:
       icon: code
     _inputs:
       template:
+        type: auto
         hidden: true
+        cascade: true
       trim_left:
+        type: auto
         hidden: true
+        cascade: true
       trim_right:
+        type: auto
         hidden: true
+        cascade: true
     params:
       template:
         parser: content
@@ -725,6 +695,7 @@ _snippets:
     _inputs:
       content:
         type: code
+        cascade: true
   jekyll_link:
     template: jekyll_tag_positional_args
     definitions:
@@ -744,9 +715,10 @@ _snippets:
       view: inline
     _inputs:
       path:
-        text: Link
-        comment: Enter the URL or path to link to.
         type: url
+        comment: Enter the URL or path to link to.
+        cascade: true
+        text: Link
   jekyll_post_url:
     template: jekyll_tag_positional_args
     definitions:
@@ -766,10 +738,8 @@ _snippets:
       view: inline
     _inputs:
       post:
-        text: Post
-        comment: Enter the post name or path.
         type: url
-base_url: ''
-editor: null
-source_editor: null
+        comment: Enter the post name or path.
+        cascade: true
+        text: Post
 timezone: Etc/UTC
