@@ -34,11 +34,31 @@ _inputs:
   header-style:
     type: select
     label: Header style
-    comment: Choose how much of the width of the screen the image takes up
+    comment: Choose the width of the banner image
     options:
       values: 
         - full width
         - two thirds
+    cascade: true
+  banner-horizontal-focal-point:
+    type: select
+    label: Horizontal image focal point
+    comment: Choose where the focus/positioning of the image should be
+    options:
+      values: 
+        - center
+        - left
+        - right
+    cascade: true
+  banner-vertical-focal-point:
+    type: select
+    label: Vertical image focal point
+    comment: Choose where the focus/positioning of the image should be
+    options:
+      values: 
+        - center
+        - top
+        - bottom
     cascade: true
   id:
     type: text
