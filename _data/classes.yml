@@ -1,4 +1,5 @@
-card-loop:
+more-than-four-link: /our-classes.html
+card-loop: 
       - image: /images/yoga-studio-3.jpg
         alt:
         heading: Chakra Flow
