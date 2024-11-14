@@ -18,15 +18,24 @@
  {% include header.html %}
 
  {% for block in page.blocks %}
-   {% if block.type == 'classes' %}
+   <!-- This points to the classes yml -->
+   {% if block.type == 'classes' %} 
       {% assign items = site.data.classes.card-loop %}
+      {% assign link = site.data.classes.more-than-four-link %}
+      <!-- This code above references the specific link for when the classes are more than four, and makes sure all of the classes point to the same page -->
+
    {% elsif block.type == 'testimonials' %}
       {% assign items = site.data.testimonials.card-loop %}
+      {% assign link = site.data.testimonials.more-than-four-link %}
+      <!-- This code above references the specific link for when the testimonials are more than four, and makes sure all of the testimonials point to the same page -->
+
    {% else %}
       {% assign items = block.items %}
    {% endif %}
+   <!-- This copy above means if it's not in the yml, then point just to the block -->
 
- {% include /{{block.id}}.html %}
+ {% include /{{block.id}}.html link=link items=items %}
+ <!-- This passes the message on to the include that the information (link) is indeed a link and to use it -->
 
  {% endfor %}
 

@@ -18,7 +18,8 @@
     <div class="self-end">
 
       {% if items.size > 4 and forloop.index == 4 %}
-        <a href="/our-classes.html" class="featured-text text-4xl">See more &#8594;</a>
+        <a href="{{link}}" class="featured-text text-2xl">See more &#8594;</a>
+        <!-- This {{link}} looks super generic, but it works because of the assigns in the default layout, and not an item.something because it's not technically in the loop because of the if statement -->
 
       {% else %}
 

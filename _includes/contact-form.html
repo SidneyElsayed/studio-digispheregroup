@@ -1,4 +1,11 @@
 <section class="border-y border-featured">
+  
+  {% if block.section-heading %}
+
+  <h2 class="px-8 sm:px-16 featured-text text-4xl">{{block.section-heading}}</h2>
+
+  {% endif %}
+
   <div class="relative sm:left-[30vw] sm:w-[70vw] ">
     <form class="p-8 px-8 sm:px-16 flex flex-col md:pr-12">
       <!-- Name -->
