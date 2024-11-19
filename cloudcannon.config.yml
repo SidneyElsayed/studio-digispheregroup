@@ -100,6 +100,15 @@ _inputs:
         - center
         - bottom
     cascade: true
+  type:
+    type: select
+    label: Information type
+    comment: Choose what information is pulled into this block
+    options:
+      values: 
+        - classes
+        - testimonials
+    cascade: true
   id:
     type: text
     hidden: true
