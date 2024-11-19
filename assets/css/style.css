@@ -860,6 +860,9 @@ footer a:hover {
     .md\:order-first {
         order: -9999;
     }
+    .md\:order-last {
+        order: 9999;
+    }
     .md\:col-span-1 {
         grid-column: span 1 / span 1;
     }

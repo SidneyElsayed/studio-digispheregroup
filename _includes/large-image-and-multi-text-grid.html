@@ -1,7 +1,7 @@
 <section class=" grid grid-cols-4 min-h-screen divide-x divide-y divide-featured">
   
   <div class="relative flex col-span-4 md:col-span-2 row-span-4 md:row-span-2">
-    <img class="absolute inset-0 object-cover w-full h-full object-top" style="object-position: 50% 25%;" src="{{block.image}}" alt="{{block.alt}}">
+    <img class="absolute inset-0 object-cover w-full h-full object-top" style="object-position: {{block.image-horizontal-focal-point}} {{block.image-vertical-focal-point}}" src="{{block.image}}" alt="{{block.alt}}">
     <div class="relative p-8 sm:p-16 col-span-2 text-white pr-12 self-end">
       <div>
         <h2 class="pb-8 featured-text text-4xl">{{block.heading}}</h2>
@@ -13,6 +13,7 @@
     </div>
   </div>
 
+  <!-- Smaller text square content -->
   {% for item in items | limit:4 %}
   <div class="col-span-2 md:col-span-1 -my-px p-6 flex">
     <div class="self-end">
