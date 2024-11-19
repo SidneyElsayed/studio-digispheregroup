@@ -81,6 +81,25 @@ _inputs:
         - top
         - bottom
     cascade: true
+  image-placement:
+    type: select
+    label: Image placement
+    comment: Choose whether the image is on the left or right
+    options:
+      values: 
+        - left
+        - right
+    cascade: true
+  text-placement:
+    type: select
+    label: Text placement
+    comment: Choose where the text in placed in relation to the image
+    options:
+      values: 
+        - top
+        - center
+        - bottom
+    cascade: true
   id:
     type: text
     hidden: true
