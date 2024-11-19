@@ -1,7 +1,12 @@
 <!-- Text and Image Grid -->
 <section class="min-h-screen border-y border-featured grid md:grid-cols-2 divide-x divide-featured">
+  <!-- Image -->
+  <!-- md:h-full on the div negates the h-72, h-full on the image is still needed because of the position absolute -->
+  <div class="grow relative order-first h-72 md:order-none md:h-full"> 
+    <img class="absolute w-full h-full object-cover object-center" style="object-position: {{block.image-horizontal-focal-point}} {{block.image-vertical-focal-point}}"  src="{{block.image}}" alt="{{block.alt}}">
+  </div>
   <!-- Text -->
-  <div class="p-8 sm:p-16 col-span-1 pr-12 self-end">
+  <div class="p-8 sm:p-16 col-span-1 pr-12 self-start {% if block.image-placement == 'right' %} md:order-first {% endif %}">
     <div>
       <h2 class="pb-8 featured-text text-4xl">{{block.heading}}</h2>
     </div>
@@ -10,9 +15,5 @@
     <div class="pt-6">
       <button class="button">{{block.button-text}}</button>
     </div>
-  </div>
-  <!-- md:h-full on the div negates the h-72, h-full on the image is still needed because of the position absolute -->
-  <div class="grow relative order-first h-72 md:order-none md:h-full"> 
-    <img class="absolute w-full h-full object-cover object-center" style="object-position: 50% 15%;"  src="{{block.image}}" alt="{{block.alt}}">
   </div>
 </section>
