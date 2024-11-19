@@ -1,13 +1,13 @@
 <!-- Cards with Border Section -->
-<section class="py-24 border-y border-featured">
+<section class="py-28 border-y border-featured">
 
   {% if block.section-heading %}
 
-  <h2 class="px-8 sm:px-16 featured-text text-4xl">{{block.section-heading}}</h2>
+  <h2 class="px-8 sm:px-16 pb-6 featured-text text-4xl">{{block.section-heading}}</h2>
 
   {% endif %}
 
-  <div class="gap-6 p-16 pt-6 {% if items.size > 3 %} flex overflow-x-auto w-full {% else %} grid md:grid-cols-3 {% endif %}">
+  <div class="gap-6 px-16 {% if items.size > 3 %} flex overflow-x-auto w-full {% else %} grid md:grid-cols-3 {% endif %}">
 
     {% for item in items %}
 
