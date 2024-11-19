@@ -6,7 +6,9 @@
     <img class="absolute w-full h-full object-cover object-center" style="object-position: {{block.image-horizontal-focal-point}} {{block.image-vertical-focal-point}}"  src="{{block.image}}" alt="{{block.alt}}">
   </div>
   <!-- Text -->
-  <div class="p-8 sm:p-16 col-span-1 pr-12 self-start {% if block.image-placement == 'right' %} md:order-first {% endif %}">
+  <div class="p-8 sm:p-16 col-span-1 pr-12 {% if block.text-placement == 'top' %} self-start {% elsif block.text-placement == 'center' %} self-center {% elsif block.text-placement == 'bottom' %} self-end {% endif %} 
+  
+  {% if block.image-placement == 'right' %} md:order-first {% endif %}">
     <div>
       <h2 class="pb-8 featured-text text-4xl">{{block.heading}}</h2>
     </div>
