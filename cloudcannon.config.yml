@@ -31,6 +31,14 @@ _inputs:
       allow_create: true
       empty_type: array
     cascade: true
+  layout:
+    type: select
+    label: Layout
+    comment: Choose the page layout type
+    options:
+      values: 
+        - default
+    cascade: true
   # This header style section is a perfect example for making the dropdown for the client in cloud cannon
   header-style:
     type: select
