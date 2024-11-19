@@ -61,6 +61,26 @@ _inputs:
         - top
         - bottom
     cascade: true
+  image-horizontal-focal-point:
+    type: select
+    label: Horizontal image focal point
+    comment: Choose where the focus/positioning of the image should be
+    options:
+      values: 
+        - center
+        - left
+        - right
+    cascade: true
+  image-vertical-focal-point:
+    type: select
+    label: Vertical image focal point
+    comment: Choose where the focus/positioning of the image should be
+    options:
+      values: 
+        - center
+        - top
+        - bottom
+    cascade: true
   id:
     type: text
     hidden: true
