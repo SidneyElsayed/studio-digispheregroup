@@ -11,7 +11,7 @@ module.exports = {
       colors: {
         'featured': 'var(--featured-color)',
         'accent': 'var(--accent-color)',
-        'base': 'var(--base-color)',
+        'base-color': 'var(--base-color)',
       }
     },
   },
