@@ -177,8 +177,7 @@ _structures:
               alt:
               heading: Card title
               text: >-
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolorem
-                laudantium, dolor blanditiis!
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolorem laudantium, dolor blanditiis!
       - label: cards with border section
         value:
           id: cards-with-border-section
