@@ -187,6 +187,7 @@ _structures:
               heading: Card title
               text: Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolorem laudantium, dolor blanditiis!
               button-text: Sign up
+              button-link: 
 _snippets:
   _cc_jekyll_unknown_paired_tag:
     hidden: true
