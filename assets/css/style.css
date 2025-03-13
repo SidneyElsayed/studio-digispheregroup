@@ -603,7 +603,7 @@ video {
 .border-b {
     border-bottom-width: 1px;
 }
-.border-base {
+.border-base-color {
     border-color: var(--base-color);
 }
 .border-black {
@@ -613,7 +613,7 @@ video {
 .border-featured {
     border-color: var(--featured-color);
 }
-.bg-base {
+.bg-base-color {
     background-color: var(--base-color);
 }
 .bg-featured {
@@ -637,9 +637,6 @@ video {
 .p-1 {
     padding: 0.25rem;
 }
-.p-16 {
-    padding: 4rem;
-}
 .p-2 {
     padding: 0.5rem;
 }
@@ -654,6 +651,10 @@ video {
 }
 .p-8 {
     padding: 2rem;
+}
+.px-16 {
+    padding-left: 4rem;
+    padding-right: 4rem;
 }
 .px-6 {
     padding-left: 1.5rem;
@@ -675,9 +676,9 @@ video {
     padding-top: 0.5rem;
     padding-bottom: 0.5rem;
 }
-.py-24 {
-    padding-top: 6rem;
-    padding-bottom: 6rem;
+.py-28 {
+    padding-top: 7rem;
+    padding-bottom: 7rem;
 }
 .py-4 {
     padding-top: 1rem;
@@ -686,14 +687,6 @@ video {
 .py-6 {
     padding-top: 1.5rem;
     padding-bottom: 1.5rem;
-}
-.px-16 {
-    padding-left: 4rem;
-    padding-right: 4rem;
-}
-.py-28 {
-    padding-top: 7rem;
-    padding-bottom: 7rem;
 }
 .pb-2 {
     padding-bottom: 0.5rem;
@@ -722,11 +715,11 @@ video {
 .pt-10 {
     padding-top: 2.5rem;
 }
-.pt-6 {
-    padding-top: 1.5rem;
-}
 .pt-5 {
     padding-top: 1.25rem;
+}
+.pt-6 {
+    padding-top: 1.5rem;
 }
 .text-center {
     text-align: center;
@@ -745,10 +738,6 @@ video {
 .text-7xl {
     font-size: 4.5rem;
     line-height: 1;
-}
-.text-base {
-    font-size: 1rem;
-    line-height: 1.5rem;
 }
 .text-sm {
     font-size: 0.875rem;
@@ -770,7 +759,7 @@ video {
 .tracking-widest {
     letter-spacing: 0.1em;
 }
-.text-base {
+.text-base-color {
     color: var(--base-color);
 }
 .text-featured {
@@ -868,14 +857,11 @@ footer a:hover {
 }
 
 @media (min-width: 768px) {
-    .md\:order-none {
-        order: 0;
-    }
     .md\:order-first {
         order: -9999;
     }
-    .md\:order-last {
-        order: 9999;
+    .md\:order-none {
+        order: 0;
     }
     .md\:col-span-1 {
         grid-column: span 1 / span 1;
