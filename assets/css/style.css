@@ -787,6 +787,10 @@ body {
 .featured-text { font-family: "Oranienbaum", serif;}
 .accent-text { font-family: "Poppins", sans-serif;}
 
+.text-base-color {
+    color: var(--base-color);
+}
+
 /* Reuseable Group Styles */
 .button {
     background-color: var(--featured-color);
